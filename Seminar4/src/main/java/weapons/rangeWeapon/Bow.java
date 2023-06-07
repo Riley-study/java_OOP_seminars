@@ -10,4 +10,8 @@ public class Bow implements Ranged{
     public int distance() {
         return 50   ;
     }
-}
+    public String toString() {
+        return String.format("Bow: %d ", damage());
+    }
+
+    }

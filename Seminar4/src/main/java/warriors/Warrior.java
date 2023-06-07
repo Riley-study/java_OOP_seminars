@@ -49,4 +49,9 @@ public abstract class Warrior {
             healthPoint =0;
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, Weapon: %s, Health Point: %d", name, weapon, healthPoint);
+    }
 }
