@@ -4,13 +4,13 @@ import weapons.Weapon;
 
 import java.util.Random;
 
-public abstract class Warrior {
+public abstract class Warrior<W extends Weapon> {
     private String name;
     private int healthPoint;
-    private Weapon weapon;
+    private W weapon;
 
 
-    public Warrior(String name, int healthPoint, Weapon weapon) {
+    public Warrior(String name, int healthPoint, W weapon) {
         this.name = name;
         this.healthPoint = healthPoint;
         this.weapon = weapon;
@@ -28,11 +28,11 @@ public abstract class Warrior {
         this.healthPoint = healthPoint;
     }
 
-    public Weapon getWeapon() {
+    public W getWeapon() {
         return weapon;
     }
 
-    public void setWeapon(Weapon weapon) {
+    public void setWeapon(W weapon) {
         this.weapon = weapon;
     }
 
