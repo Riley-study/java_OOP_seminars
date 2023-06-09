@@ -27,8 +27,8 @@ public class mainSeminar4 {
         System.out.println(infantrymanTeam.toString());
 
 
-        Battle battle1 = new Battle(new Infantryman("John", 150, new Axe(), new Shell()),
-                new Archer("Robin", 100, new Bow(), new Shell()));
+        Battle battle1 = new Battle(new Infantryman("John", 50, new Axe(), new Shell()),
+                new Archer("Robin", 60, new Bow(), new Shell()));
         battle1.fight();
     }
 }

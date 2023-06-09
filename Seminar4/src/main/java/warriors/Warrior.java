@@ -1,5 +1,6 @@
 package warriors;
 
+import shield.Shell;
 import shield.Shield;
 import weapons.Weapon;
 
@@ -48,21 +49,22 @@ public abstract class Warrior<W extends Weapon, S extends Shield> {
 
     public int hit() {
         Random rnd = new Random();
-        int hitDamage = rnd.nextInt(0, weapon.damage()+1);
+        int hitDamage = rnd.nextInt(5, weapon.damage()+1);
 
         return hitDamage;
     }
 
     public int shieldProtection(){
-        Random rnd = new Random();
-        int shieldProtection = rnd.nextInt(0, shield.protection()+1);
-        return shieldProtection;
+        Shell shieldProtection = new Shell();
+        return shieldProtection.protection();
     }
     public void reduceHealthWithShield(int damage, int shield){
-        if (shield > damage){
-            shield = damage;
+        if (shield > damage && shield >0) {
+            shield -= damage;
+        } else {
+            healthPoint -= damage;
+            shield = 0;
         }
-        healthPoint+= (shield - damage);
         if (healthPoint<0){
             healthPoint =0;
         }

@@ -3,10 +3,10 @@ package shield;
 public class Shell implements Shield {
     @Override
     public int protection() {
-        return 50;
+        return 10;
     }
 
     public String toString() {
-        return String.format("Shield: %d ", protection());
+        return String.format("Shell: %d ", protection());
     }
 }
