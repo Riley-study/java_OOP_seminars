@@ -39,8 +39,8 @@ public abstract class Warrior<W extends Weapon, S extends Shield> {
     public void setWeapon(W weapon) {
         this.weapon = weapon;
     }
-    public S getShield() {
-        return shield;
+    public int getShield() {
+        return shield.protection();
     }
 
     public void setShield(S shield) {
@@ -79,7 +79,7 @@ public abstract class Warrior<W extends Weapon, S extends Shield> {
 
     @Override
     public String toString() {
-        return String.format("%s, Weapon: %s, Health Point: %d", name, weapon, healthPoint);
+        return String.format("%s, Weapon: %s, Health Point: %d, Shield on start: %d", name, weapon, healthPoint, shield.protection());
     }
 }
 

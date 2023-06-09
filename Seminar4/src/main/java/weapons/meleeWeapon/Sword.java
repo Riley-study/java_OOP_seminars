@@ -1,6 +1,8 @@
 package weapons.meleeWeapon;
 
-public class Sword implements Melee{
+import shield.ShieldForInfantryman;
+
+public class Sword implements Melee {
     @Override
     public int damage() {
         return 4;

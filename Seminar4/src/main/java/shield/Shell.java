@@ -1,12 +1,12 @@
 package shield;
 
-public class Shell implements Shield {
+public class Shell implements ShieldForInfantryman {
     @Override
     public int protection() {
-        return 10;
+        return 15;
     }
 
     public String toString() {
-        return String.format("Shell: %d ", protection());
+        return String.format("Shield: %d ", protection());
     }
 }

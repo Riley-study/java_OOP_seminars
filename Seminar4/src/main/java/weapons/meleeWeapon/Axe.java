@@ -1,5 +1,8 @@
 package weapons.meleeWeapon;
 
+import shield.Shield;
+import shield.ShieldForInfantryman;
+
 public class Axe implements Melee{
     @Override
     public int damage() {
@@ -10,4 +13,5 @@ public class Axe implements Melee{
     public String toString() {
         return String.format("Axe: %d ", damage());
     }
-}
+
+ }

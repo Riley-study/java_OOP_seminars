@@ -1,4 +1,7 @@
 import shield.Shell;
+import shield.ShieldForInfantryman;
+import shield.ShieldForMelee;
+import shield.SuperShield;
 import warriors.Archer;
 import warriors.Infantryman;
 import warriors.Warrior;
@@ -10,12 +13,12 @@ import weapons.rangeWeapon.CrossBow;
 public class mainSeminar4 {
     public static void main(String[] args) {
         Team<Warrior> team1 = new Team<>();
-        team1.add(new Archer("Robin", 100, new Bow(), new Shell()));
+        team1.add(new Archer("Robin", 100, new Bow(), new SuperShield()));
         team1.add(new Infantryman("John", 150, new Axe(), new Shell()));
 
         Team<Archer> teamArchers = new Team<>();
-        teamArchers.add(new Archer("Jimmy", 100, new CrossBow(), new Shell()));
-        teamArchers.add(new Archer("Piter", 100, new Bow(), new Shell()));
+        teamArchers.add(new Archer("Jimmy", 100, new CrossBow(), new SuperShield()));
+        teamArchers.add(new Archer("Piter", 100, new Bow(), new SuperShield()));
 
         Team<Infantryman> infantrymanTeam = new Team<>();
         infantrymanTeam.add(new Infantryman("James", 150, new Sword(), new Shell()));
@@ -28,7 +31,7 @@ public class mainSeminar4 {
 
 
         Battle battle1 = new Battle(new Infantryman("John", 50, new Axe(), new Shell()),
-                new Archer("Robin", 60, new Bow(), new Shell()));
+                new Archer("Robin", 60, new Bow(), new SuperShield()));
         battle1.fight();
     }
 }
