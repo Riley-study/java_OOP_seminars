@@ -46,8 +46,8 @@ public class Team<W extends Warrior> implements Iterable {
     }
 
     public int getMinShield(){
-        int minShield = 1000;
-        for (W warrior: team){
+        int minShield = team.get(0).getShield();
+            for (W warrior: team){
             if (minShield > warrior.getShield()){
                 minShield = warrior.getShield();
             }
